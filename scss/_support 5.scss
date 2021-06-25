@@ -1,0 +1,98 @@
+.supportBanner{
+    h2{
+        font-size: 0;
+    }
+    .mobileSupportBanner{
+        display: none;
+    }
+}
+.support{
+    h2{
+        font-size: 36px;
+        text-align: center;
+        padding: 20px 0 20px 100px;
+    }
+}
+.supportContent{
+    display: flex;
+    .supportWay{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .supportTxt{
+        margin-bottom: 50px;
+    }
+    p{
+        padding: 20px 0;
+    }
+    .supportList{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+        h2{
+            font-size: 0;
+            padding: 0;
+            text-align: unset;
+            line-height: 0;
+        }
+        li{
+            width: 30%;
+            // overflow: hidden;
+            font-size: 0;
+        }
+        a{
+            display: block;
+            transition: .5s;
+            box-shadow: 5px 5px 5px $img-box-shadow-color;
+        }
+        a:hover{
+            transform: scale(1.1);
+        }
+        
+    }
+}
+@media screen and (max-width: 769px){
+    .support{
+        h2{
+            padding: 25px 0;
+        }
+        .supportWay{
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 415px){
+    .supportBanner{
+        .pcSupportBanne{
+            display: none;
+        }
+        .mobileSupportBanner{
+            display: block;
+        }
+        p{
+            padding: 20px;
+            background-color: #323232;
+            color: #fff;
+            font-size: 14px;
+        }
+        p:last-child{
+            padding-top: 0;
+        }
+    }
+    .support{
+        h2{
+            font-size: 26px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .supportList{
+            display: block;
+            li{
+                width: 80%;
+                margin: 0 auto 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,217 @@
+// Header
+.header{
+    h1{
+        font-size: 0;
+    }
+    .mobileDevice{
+        display: none;
+    }
+    a{
+        display: block;
+    }
+    .pcHeaderBanner{
+        width: 100%;
+        max-width: 1440px;
+        height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        .impression{
+            width: 70%;
+            height: 100vh;
+            margin: 0 auto;
+            line-height: 100vh;
+            padding: 10px;
+            animation-duration: 2s;
+        }
+    }
+    .bannerTxt{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 100vh;
+        .logo{
+            width: 85%;
+            margin: 0 auto;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 769px){
+    .header{
+        .mobileDivider{
+            padding: 40px 0;
+        }
+        .pcHeaderBanner{
+            display: none;
+        }
+        .mobileDevice{
+            display: flex;
+        }
+        .mobileNavBar{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            background-color: #323232;
+            box-shadow: 0 3px 5px #aaa;
+            .logo{
+                width: 30%;
+                padding: 20px;
+            }
+        }
+        h2{
+            font-size: 0;
+        }
+        #headerMenuCtrl{
+            position: absolute;
+            display: none;
+            opacity: 0;
+            z-index: -1;
+        }
+        #headerMenuCtrl:checked ~ .navWrap .mobileNavBarList{
+            top: 75px;
+        }
+        #headerMenuCtrl:checked ~ .menuCtrl:before{
+            box-shadow: 0px 12px 0 transparent,
+                        0px -12px 0 transparent;
+            transform: rotate(45deg);
+        }
+        #headerMenuCtrl:checked ~ .menuCtrl:after{
+            transform: rotate(-45deg);
+        }
+        .navWrap{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .menuCtrl{
+            position: fixed;
+            display: block;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            right: 20px;
+            font-size: 0;
+            z-index: 3;
+        }
+        .menuCtrl:before,
+        .menuCtrl:after{
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 0;
+            border-bottom: 3px solid $box-shadow-color;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            transition: 1s;
+        }
+        .menuCtrl:before{
+            box-shadow: -10px -12px 0 $box-shadow-color,
+                        -10px 12px 0 $box-shadow-color;
+        }
+        .mobileNavBarList{
+            position: absolute;
+            top: -999px;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            transition: 1s;
+            li{
+                font-size: 0;
+                background-color: rgba(255, 255, 255, 1);
+                border-bottom: 1px solid #aaa;
+            }
+            a{
+                display: block;
+                font-size: 18px;
+                text-align: center;
+                padding: 20px 0;
+                span{
+                    position: relative;
+                }
+                span:before,
+                span:after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    transition: .5s;
+                }
+                span:before{
+                    border-top: 1px solid $hover-border-color;
+                    top: -5px;
+                    right: 0;
+                }
+                span:after{
+                    border-bottom: 1px solid $hover-border-color;
+                    bottom: -5px;
+                    left: 0;
+                }
+            
+                
+            }
+            a:hover span:before,
+			a:hover span:after {
+				width: 100%;
+            }
+            .menuIcon{
+                display: flex;
+                justify-content: center;
+                .fab,
+                .far{
+                    display: block;
+                    font-size: 30px;
+                    padding: 0 20px;
+                    color: $hover-background-color;
+                }
+            }
+        }
+        .mobileHeaderBanner{
+            margin-top: 100px;
+            width: 100%;
+            position: relative;
+            z-index: -1;
+            .mobileImpression{
+                width: 75%;
+                margin: 0 auto;
+            }
+            .mobileBigLogo{
+                width: 35%;
+                padding: 50px;
+                position: absolute;
+                top: 0;
+                left: -4%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 415px){
+    .header{
+        .mobileDivider{
+            padding: 0;
+        }
+        .mobileNavBar{
+            .logo{
+                width: 45%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 376px){
+    .header{
+        #headerMenuCtrl:checked ~ .navWrap .mobileNavBarList{
+            top: 65px;
+        }
+    }
+}

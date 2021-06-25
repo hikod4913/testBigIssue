@@ -1,0 +1,91 @@
+// AboutUs
+.about{
+    h2{
+        font-size: 36px;
+        text-align: center;
+        padding: 50px 0 50px 100px;
+    }
+    .aboutContent{
+        display: flex;
+    }
+    .aboutUs{
+        width: 70%;
+        margin: 0 auto;
+        li{
+            display: flex;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        li:nth-child(2){
+            flex-direction: row-reverse;
+            .aboutTxt{
+                align-items: flex-end;
+            }
+        }
+        .aboutPic{
+            width: 50%;
+            .numberPic{
+                width: 10%;
+                position: absolute;
+                top: 20px;
+                left: 45%;
+            }
+        }
+        .aboutTxt{
+            width: 50%;
+            background-image: url(../material/01-PC/04-about/bg-about.png);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3,h4,p{
+                width: 100%;
+                text-align: center;
+                padding: 10px 50px;
+                background-color: $txt-backgorund-color;
+            }
+            h3{
+                font-size: 22px;
+                padding-top: 30px;
+            }
+            h4{
+               font-size: 14px; 
+            }
+            p{
+                font-size: 12px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 769px){
+    .about{
+        h2{
+            padding: 25px 0;
+        }
+        .aboutUs{
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 415px){
+    .about{
+        h2{
+            font-size: 26px;
+        }
+        .aboutUs{
+            li{
+                // width: 100%;
+                display: block;
+                .aboutPic{
+                    width: 100%;
+                    .numberPic{
+                        display: none;
+                    }
+                }
+                .aboutTxt{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

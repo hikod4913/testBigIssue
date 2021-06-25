@@ -1,0 +1,62 @@
+.footer{
+    .sectionContainer{
+        background-color: $footer-background-color;
+        padding: 50px 0;
+    }
+}
+.footerContent{
+    width: 80%;
+    margin: 0 auto;
+    .footerInfo:first-child{
+        margin-bottom: 50px;
+    }
+    .footerInfo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $txt-color;
+        font-size: 14px;
+        .footerSocial{
+            display: flex;
+            align-items: center;
+            li{
+                font-size: 0;
+                width: 50px;
+                color: $txt-color;
+                a{
+                    display: block;
+                    margin: 0 10px;
+                }
+            }
+        }
+        .footerAboutIssue{
+            display: flex;
+            li{
+                margin-right: 20px;
+            }
+        }
+    }
+    
+}
+.copyright{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    color: $txt-color;
+    background-color: $footer-copyright;
+}
+@media screen and (max-width: 769px){
+    .footerContent{
+        .footerInfo{
+            .footerAboutIssue{
+                display: block;
+            }
+        }
+        .contactInfo{
+            display: block;
+            text-align: center;
+        }
+    }
+}

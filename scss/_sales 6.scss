@@ -1,0 +1,129 @@
+// Sales
+.sales{
+    h2{
+        font-size: 36px;
+        text-align: center;
+        padding: 50px 0 50px 100px;
+    }
+    .salesContent{
+        display: flex;
+        margin-bottom: 50px;
+        .salesStory{
+            width: 70%;
+            margin: 0 auto;
+            
+        }
+        .salesList{
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 50px;
+                li{
+                    width: 45%;
+                    height: 100%;
+                    padding: 20px 10px;
+                    text-align: center;
+                    background-image: url(https://github.com/Soumeteor/the-big-iusse/blob/master/material/sales/bg-sales.png?raw=true);
+                    .salesPhoto{
+                        width: 90%;
+                        margin: 0 auto;
+                        box-shadow: 5px 5px 5px $img-box-shadow-color;
+                    }
+                    > .moreBtn{
+                        padding-left: 0;
+                    }
+                    > .moreBtn:before{
+                        top: 12px;
+                        left: 0;
+                    }
+                    .storyTxt{
+                        h3{
+                            font-size: 22px;
+                            text-align: center;
+                            padding: 20px 0;
+                            position: relative;
+                            z-index: 0;
+                        }
+                        h3:before{
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 35%;
+                            background-color: $hover-background-color;
+                            left: 25%;
+                            bottom: 10px;
+                            z-index: -1;
+                            transition: width .3s;
+                        }
+                        p{
+                            margin-bottom: 20px;
+                            padding: 10px;
+                        }
+                        p:first-child{
+                            font-size: 20px;
+                            text-align: left;
+                        }
+                        p:last-child{
+                            font-size: 14px;
+                            text-align: left;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                li:hover > .storyTxt h3:before{
+                    width: 50%;
+                }
+            }
+    }
+}
+@media screen and (max-width: 769px){
+    .sales{
+        h2{
+            padding: 25px 0;
+        }
+        .salesContent{
+            .salesStory{
+                width: 90%;
+                .salesList{
+                    .storyTxt{
+                        h3{
+                        font-size: 18px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                        p:last-child{
+                            font-size: 12px;
+                        }
+
+                }
+            }
+            
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 415px){
+    .sales{
+        h2{
+            font-size: 26px;
+        }
+        .salesContent{
+            .salesStory{
+                width: 100%;
+                .salesList{
+                    display: block;
+                    width: 90%;
+                    margin: 0 auto;
+                    li{
+                        width: 100%;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+            .salesList ~ .salesList{
+                display: none;
+            }
+        }
+    }
+}

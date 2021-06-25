@@ -1,0 +1,525 @@
+.header{
+    .headerPic{
+        position: relative;
+        background-color: #fff;
+        // a{
+        //     display: block;
+        // }
+        .mobileHeaderPic{
+            display: none;
+        }
+    }
+    .headerPic:after{
+        content: "";
+        position: absolute;
+        width: 95%;
+        height: 1px;
+        background-color: #dbdbdc;
+        left: 0;
+        bottom: 20%;
+    }
+}
+.storyOfPeople,
+.magazines{
+    display: flex;
+    .storyAisdeMenu,
+    .magazineAisdeMenu{
+        padding: 100px 0;
+        position: relative;
+        li{
+            font-size: 0;
+            text-align: right;
+            position: relative;
+            a{
+                display: block;
+                font-size: 16px;
+                padding: 30px 0;
+                transition: .3s;
+                position: relative;
+            }
+            a:before{
+                content: "";
+                position: absolute;
+                width: 80%;
+                border-bottom: 1px solid $border-color;
+                right: 0;
+                bottom: 25px;
+            }
+            a:hover{
+                color: $hover-border-color;
+            }
+
+        }
+    }
+    .magazineAisdeMenu:before,
+    .storyAisdeMenu:before{
+        content: "";
+        position: absolute;
+        height: 120%;
+        border-right: 1px solid #dbdbdc;
+        right: -7px;
+        top: -15%;
+        z-index: -1;
+    }
+    .magazineAisdeMenu:before{
+        right: -9px;
+    }
+    .storyContent,
+    .magazineContent{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        
+        .moreBtn{
+            padding: 0;
+            a{
+                margin-bottom: 50px;
+            }
+        }
+        .moreBtn:before{
+            left: 0;
+        }
+    }
+    .storyBreadCrumb,
+    .magazineBreadCrumb{
+            display: flex;
+            margin-bottom: 50px;
+            li{
+                font-size: 0;
+            }
+            a,
+            .fas{
+                display: block;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 15px;
+            }
+            span{
+                position: relative;
+            }
+            span:before{
+                content: "";
+                position: absolute;
+                width: 0;
+                border-bottom: 10px solid #fa0;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: width .3s;
+            }
+            a:hover > span:before{
+                width: 100%;
+            }
+        
+    }
+    .mobileStorytBreadCrumb{
+            display: none;
+        }
+    .selectArea,
+    .selectYears{
+            position: absolute;
+            top: 0;
+            right: -10px;
+            z-index: 1;
+            li{
+                font-size: 0;
+            }
+            .selectMenu{
+                width: 130px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 16px;
+                padding: 5px 25px;
+                background-color: #777;
+                color: $txt-color;
+            }
+            .subSelectMenu{
+                width: 100%;
+                position: absolute;
+                top: 34px;
+                left: 0;
+                display: none;
+                a{
+                    display: block;
+                    font-size: 16px;
+                    text-align: center;
+                    padding: 5px 25px;
+                    background-color: #ccc;
+                }
+                a:hover{
+                    background-color: #aaa;
+                }
+            }
+            .selectMenu:hover > .subSelectMenu{
+                display: block;
+            }
+            .mobileSelectYears{
+                display: none;
+            }
+            
+    }
+    .mobileSelectYears{
+        display: none;
+    }
+    .storyArticle{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        .storyPicDescription{
+            width: 90%;
+            margin: 0 auto 100px auto;
+            display: flex;
+            align-items: center;
+            background-image: url(https://github.com/Soumeteor/the-big-iusse/blob/master/material/01-PC/03-story/Story_bg.png?raw=true);
+            .storyPic{
+                width: 50%;
+                h3{
+                    font-size: 0;
+                }
+                img{
+                    box-shadow: 5px 5px 5px #fa0;
+                }
+            }
+            .picTxt{
+                width: 50%;
+                p{
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgba(245, 243, 242, .5);
+                }
+                .salesName{
+                    padding-top: 0;
+                    text-align: right;
+                }
+            }
+
+        }
+        .storyTxtContent{
+            position: relative;
+            p{
+                text-indent: 2em;
+                padding: 30px 50px;
+            }
+        }
+        .storyTxtContent:before{
+            content: "";
+            position: absolute;
+            border-right: 1px solid #aaa;
+            height:110%;
+            top: -20%;
+            right: 0;
+        }
+        .storyTxtContent:after{
+            content: "";
+            position: absolute;
+            border-top: 1px solid #aaa;
+            width: 100%;
+            right: -10%;
+            top: -5%;
+        }
+    }
+    .allStory,
+    .northStory,
+    .centralStory,
+    .southStory,
+    .eastStory,
+    .allMagazine{
+        width: 80%;
+        margin: 0 auto;
+        .mobileSelect{
+            display: none;
+        }
+    }
+    .allStoryList,
+    .northStoryList,
+    .centralStoryList,
+    .southStoryList,
+    .eastStoryList{
+        h2{
+            font-size: 0;
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            background-image: url(https://github.com/Soumeteor/the-big-iusse/blob/master/material/01-PC/03-story/Story_bg.png?raw=true);
+            margin-bottom: 50px;
+        }
+        li:hover h3 span:before{
+            width: 100%;
+        }
+        .allStoryPic{
+            width: 39%;
+            box-shadow: 5px 5px 5px #fa0;
+        }
+        .allStoryTxt{
+            width: 60%;
+            padding: 10px;
+            h3{
+                padding: 20px 10px;
+                font-size: 24px;
+                position: relative;
+                z-index: 1;
+                span{
+                    position: relative;
+                }
+                span:before{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    border-bottom: 4px solid #fa0;
+                    bottom: 0;
+                    left: 0;
+                    transition: .3s;
+                }
+            }
+            p{
+                padding: 10px;
+                font-size: 14px;
+                background-color: rgba(255, 255, 255, .5);
+            }
+            .subStoryTitle{
+                font-size: 16px;
+            }
+            .moreBtn{
+                padding-left: 0;
+                position: absolute;
+                bottom: -20%;
+                right: 2%;
+                a{
+                    font-size: 14px;
+                    padding: 10px;
+                }
+                a:after{
+                    top: -8px;
+                }
+            }
+            .moreBtn:before{
+                top: 6px;
+                left: 0;
+                height: 15%;
+            }
+        }
+    }
+    .allMagazineList{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        h2{
+            font-size: 0;
+        }
+        li{
+            width: 31%;
+            .magazinePic{
+                margin-bottom: 50px;
+            }
+        }
+        li > .moreBtn{
+            padding: 0;
+        }
+        li > .moreBtn:before{
+            left: 0;
+        }
+    }
+
+}
+@media screen and (max-width: 769px){
+    .header{
+        .mobileDivider{
+            padding: 35px 0;
+        }
+        .headerPic{
+           .pcHeaderPic{
+               display: none;
+           } 
+           .mobileHeaderPic{
+               display: block;
+           }
+        }
+        .headerPic:after{
+            width: 100%;
+            bottom: 10%;
+        }
+    }
+    .storyOfPeople{
+        .selectArea,
+        .selectYears{
+            display: none;
+        }
+        .storyBreadCrumb{
+            margin-bottom: 20px;
+        }
+        .mobileStorytBreadCrumb{
+            display: flex;
+            margin-bottom: 20px;
+            a{
+                display: block;
+                padding: 0 15px;
+                transition: .3s;
+            }
+            a:hover{
+                color: $hover-font-color;
+            }
+            span{
+                border-bottom: 1px solid #aaa;
+            }
+        }
+        .allStory,
+        .northStory,
+        .centralStory,
+        .southStory,
+        .eastStory,
+        .allMagazine{
+            width: 100%;
+            .mobileSelect{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                li{
+                    font-size: 0;
+                }
+                a{
+                    display: block;
+                    font-size: 16px;
+                    padding: 0 20px;
+                    border-bottom: 1px solid #aaa;
+                    transition: .3s;
+                }
+                a:hover{
+                    color: $hover-border-color;
+                }
+            }
+            .allStoryList,
+            .northStoryList,
+            .centralStoryList,
+            .southStoryList,
+            .eastStoryList{
+                li{
+                background-image: none;
+                display: block;
+                margin-bottom: 100px;
+                .allStoryPic{
+                    width: 100%;
+                }
+                .allStoryTxt{
+                    background-image: url(../material/02-PAD/02-sales/bg-sales-list-PC.svg);
+                    background-position: center center;
+                    background-size: cover;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 20px 70px 20px;
+                    p:nth-child(2){
+                        display: none;
+                    }
+                    .moreBtn{
+                        right: 15px;
+                        bottom: -50px;
+                    }
+                }
+            }
+        }
+        }
+        .storyArticle{
+            width: 90%;
+            .storyPicDescription{
+                background-image: none;
+                width: 100%;
+                display: block;
+                margin-bottom: 50px;
+                .storyPic{
+                    width: 100%;
+                }
+                .picTxt{
+                    width: 100%;
+                    background-image: url(../material/02-PAD/02-sales/bg-sales-list-PC.svg);
+                    background-size: cover;
+                    background-position: center bottom;
+                }
+            }.storyTxtContent{
+                p{
+                    padding: 10px;
+                }
+            }
+            .storyTxtContent:before,
+            .storyTxtContent:after{
+                display: none;
+            }
+        }
+    }
+    .magazines{
+        .magazineContent{
+            width: 90%;
+            .magazineBreadCrumb{
+                margin-bottom: 20px;
+            }
+            .selectYears{
+                display: none;
+            }
+            .mobileSelectYears{
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 50px;
+                a{
+                    display: block;
+                    transition: .3s;
+                }
+                a:hover{
+                    color: $hover-font-color;
+                }
+                span{
+                    border-bottom: 1px solid #aaa;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 415px){
+    .storyOfPeople{
+        .storyBreadCrumb,
+        .magazineBreadCrumb{
+            a{
+                font-size: 14px;
+            }
+        }
+        .allStory,
+        .northStory,
+        .centralStory,
+        .southStory,
+        .eastStory,
+        .allMagazine{
+            .mobileSelect{
+                a{
+                    font-size: 14px;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+    .magazines{
+        .allMagazine{
+            width: 90%;
+        }
+        .allMagazineList{
+            display: block;
+            margin-bottom: 0;
+            li{
+                width: 100%;
+            }
+        }
+        .allMagazineList:first-child ~ .allMagazineList{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 378px){
+    .storyOfPeople{
+        .storyBreadCrumb,
+        .magazineBreadCrumb{
+            a{
+                padding: 0 5px;
+            }
+        }
+    }
+}

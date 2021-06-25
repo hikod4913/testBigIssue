@@ -1,0 +1,198 @@
+// Common
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+html,
+body {
+	line-height: 1.5;
+	scroll-behavior: smooth;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2;
+}
+* {
+	box-sizing: border-box;
+	// outline: 1px solid #f00;
+	
+}
+a,
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+img {
+	vertical-align: middle;
+	width: 100%;
+}
+.section {
+	padding: 50px 0;
+}
+.sectionContainer,
+.allContent {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.allContent {
+	display: flex;
+	justify-content: center;
+	.asideBar {
+		width: 100px;
+		height: 100%;
+		position: sticky;
+		padding-top: 50px;
+		top: 0;
+		z-index: 1;
+		h2 {
+			font-size: 0;
+		}
+		.asideLogo {
+			width: 50%;
+			margin: 0 auto;
+		}
+		.asideNavBarList {
+			li {
+				font-size: 0;
+			}
+			a {
+				display: block;
+				font-size: 18px;
+				writing-mode: vertical-rl;
+				line-height: 100px;
+				padding: 15px 0;
+				position: relative;
+				transition: 0.5s;
+				span {
+					position: relative;
+				}
+				span:before,
+				span:after {
+					content: "";
+					position: absolute;
+					height: 0;
+					transition: 0.5s;
+				}
+				span:before {
+					border-left: 1px solid $hover-border-color;
+					top: 0;
+					left: -10px;
+				}
+				span::after {
+					border-right: 1px solid $hover-border-color;
+					right: -10px;
+					bottom: 0%;
+				}
+			}
+			a:before {
+				content: "";
+				position: absolute;
+				width: 50%;
+				border-bottom: 1px solid #aaa;
+				bottom: 0;
+				left: 25%;
+			}
+			a:hover {
+				color: $hover-font-color;
+			}
+			a:hover span:before,
+			a:hover span:after {
+				height: 100%;
+			}
+		}
+	}
+}
+.asideCommon {
+	width: 100px;
+	position: sticky;
+	height: 100%;
+	top: 50px;
+}
+.moreBtn {
+	display: block;
+	margin: 0 auto;
+	padding-left: 100px;
+	background-color: transparent;
+	border: none;
+	position: relative;
+	a {
+		display: block;
+		padding: 13px 24px;
+		transform: translate(-5px, -5px);
+		box-shadow: 5px 5px 0 $box-shadow-color;
+		position: relative;
+		transition: 0.3s;
+		background-color: #fff !important;
+	}
+	a:before {
+		content: "";
+		position: absolute;
+		width: 120%;
+		border-top: 2px solid $border-color;
+		top: 0;
+		left: -12px;
+		border-bottom: 2px solid $border-color;
+		bottom: 0;
+		transition: 0.3s;
+	}
+	a:after {
+		content: "";
+		position: absolute;
+		height: 140%;
+		border-right: 2px solid $border-color;
+		right: 0;
+		border-left: 2px solid $border-color;
+		top: -11px;
+		left: 0;
+		transition: 0.3s;
+	}
+	a:hover {
+		transform: translate(5px, 5px);
+		box-shadow: 0 0 0 #fff;
+		background-color: $hover-background-color !important;
+		color: #fff !important;
+	}
+	a:hover:before {
+		width: 100% !important;
+		left: 0 !important;
+	}
+	a:hover:after {
+		height: 100% !important;
+		top: 0 !important;
+	}
+}
+.moreBtn:before {
+	content: "";
+	position: absolute;
+	height: 20%;
+	border-left: 2px solid #fff;
+	z-index: 2;
+	top: 12px;
+	left: 100px;
+	transform: translate(-5px, -5px);
+	transition: 0.3s;
+}
+.moreBtn:hover:before {
+	height: 0 !important;
+	transform: translate(5px, 5px);
+}
+@media screen and (max-width: 769px){
+	.asideBar,
+	.asideCommon{
+		display: none;
+	}
+	.moreBtn{
+		padding: 0;
+	}
+	.moreBtn:before {
+		left: 0;
+	}
+}
+@media screen and (max-width: 415px){
+	.section {
+		padding: 25px 0;
+	}
+}
